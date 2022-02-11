@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveloka</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container-fluid">
+          <img src="Traveloka_Primary_Logo.png" width="150px" href="#">
+
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-dark" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="tomato" viewBox="0 0 384 512"><path d="M374.6 73.39c-12.5-12.5-32.75-12.5-45.25 0l-320 320c-12.5 12.5-12.5 32.75 0 45.25C15.63 444.9 23.81 448 32 448s16.38-3.125 22.62-9.375l320-320C387.1 106.1 387.1 85.89 374.6 73.39zM64 192c35.3 0 64-28.72 64-64S99.3 64.01 64 64.01S0 92.73 0 128S28.7 192 64 192zM320 320c-35.3 0-64 28.72-64 64s28.7 64 64 64s64-28.72 64-64S355.3 320 320 320z"/></svg> Promo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" viewBox="0 0 640 512"><path d="M0 383.9l64 .0404c17.75 0 32-14.29 32-32.03V128.3L0 128.3V383.9zM48 320.1c8.75 0 16 7.118 16 15.99c0 8.742-7.25 15.99-16 15.99S32 344.8 32 336.1C32 327.2 39.25 320.1 48 320.1zM348.8 64c-7.941 0-15.66 2.969-21.52 8.328L228.9 162.3C228.8 162.5 228.8 162.7 228.6 162.7C212 178.3 212.3 203.2 226.5 218.7c12.75 13.1 39.38 17.62 56.13 2.75C282.8 221.3 282.9 221.3 283 221.2l79.88-73.1c6.5-5.871 16.75-5.496 22.62 1c6 6.496 5.5 16.62-1 22.62l-26.12 23.87L504 313.7c2.875 2.496 5.5 4.996 7.875 7.742V127.1c-40.98-40.96-96.48-63.88-154.4-63.88L348.8 64zM334.6 217.4l-30 27.49c-29.75 27.11-75.25 24.49-101.8-4.371C176 211.2 178.1 165.7 207.3 138.9L289.1 64H282.5C224.7 64 169.1 87.08 128.2 127.9L128 351.8l18.25 .0369l90.5 81.82c27.5 22.37 67.75 18.12 90-9.246l18.12 15.24c15.88 12.1 39.38 10.5 52.38-5.371l31.38-38.6l5.374 4.498c13.75 11 33.88 9.002 45-4.748l9.538-11.78c11.12-13.75 9.036-33.78-4.694-44.93L334.6 217.4zM544 128.4v223.6c0 17.62 14.25 32.05 31.1 32.05L640 384V128.1L544 128.4zM592 352c-8.75 0-16-7.246-16-15.99c0-8.875 7.25-15.99 16-15.99S608 327.2 608 336.1C608 344.8 600.8 352 592 352z"/></svg> Jadi Partner Traveloka</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="blue" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg> Simpan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" viewBox="0 0 576 512"><path d="M0 96C0 60.65 28.65 32 64 32H512C547.3 32 576 60.65 576 96V416C576 451.3 547.3 480 512 480H64C28.65 480 0 451.3 0 416V96zM160 256C160 238.3 145.7 224 128 224C110.3 224 96 238.3 96 256C96 273.7 110.3 288 128 288C145.7 288 160 273.7 160 256zM160 160C160 142.3 145.7 128 128 128C110.3 128 96 142.3 96 160C96 177.7 110.3 192 128 192C145.7 192 160 177.7 160 160zM160 352C160 334.3 145.7 320 128 320C110.3 320 96 334.3 96 352C96 369.7 110.3 384 128 384C145.7 384 160 369.7 160 352zM224 136C210.7 136 200 146.7 200 160C200 173.3 210.7 184 224 184H448C461.3 184 472 173.3 472 160C472 146.7 461.3 136 448 136H224zM224 232C210.7 232 200 242.7 200 256C200 269.3 210.7 280 224 280H448C461.3 280 472 269.3 472 256C472 242.7 461.3 232 448 232H224zM224 328C210.7 328 200 338.7 200 352C200 365.3 210.7 376 224 376H448C461.3 376 472 365.3 472 352C472 338.7 461.3 328 448 328H224z"/></svg> Pesanan Saya</a>
+          </li>
+        </ul>
+
+        <div class="dropdown">
+            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(0, 0, 0);"> <img src="images_pembayaran/800px-Flag_of_Indonesia.svg.png" width="16" height="16"> IDR</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Rupiah Indonesia</a></li>
+            <li><a class="dropdown-item" href="#">Dollar Amerika</a></li>
+            </ul>
+
+            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(0, 0, 0);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#1f1442" viewBox="0 0 512 512"><path d="M288 167.2V139.1c-28.25-36.38-47.13-79.29-54.13-125.2C231.7 .4054 214.8-5.02 206.1 5.481C184.1 30.36 168.4 59.7 157.2 92.07C191.4 130.3 237.2 156.7 288 167.2zM400 63.97c-44.25 0-79.1 35.82-79.1 80.08l.0014 59.44c-104.4-6.251-193-70.46-233-161.7C81.48 29.25 63.76 28.58 58.01 40.83C41.38 75.96 32.01 115.2 32.01 156.6c0 70.76 34.11 136.9 85.11 185.9c13.12 12.75 26.13 23.27 38.88 32.77L12.12 411.2c-10.75 2.75-15.5 15.09-9.5 24.47c17.38 26.88 60.42 72.54 153.2 76.29c8 .25 15.99-2.633 22.12-7.883l65.23-56.12l76.84 .0561c88.38 0 160-71.49 160-159.9l.0013-160.2l31.1-63.99L400 63.97zM400 160.1c-8.75 0-16.01-7.259-16.01-16.01c0-8.876 7.261-16.05 16.01-16.05s15.99 7.136 15.99 16.01C416 152.8 408.8 160.1 400 160.1z"/></svg> Pay</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Rupiah Indonesia</a></li>
+            <li><a class="dropdown-item" href="#">Dollar Amerika</a></li>
+            </ul>
+
+            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(0, 0, 0);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#1f1442" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"/></svg> Log in</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Rupiah Indonesia</a></li>
+            <li><a class="dropdown-item" href="#">Dollar Amerika</a></li>
+            </ul>
+            <button type="button" class="btn btn-primary" style="border-radius: 12px !important;"><b>Daftar</b></button>
+            </div>
+        </div>
+      </nav>
+
+     <div class="border bg-light" style="background-color: rgb(223, 215, 215) !important; width: auto; height: auto;">
+      <div class="container drop d-flex">
+        <div class="dropdown"> 
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(0, 0, 0) position=relative;">Transportasi</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Tiket Pesawat</a></li>
+              <li><a class="dropdown-item" href="#">Pesawat + Hotel</a></li>
+              <li><a class="dropdown-item" href="#">Tiket Kereta Api</a></li>
+              <li><a class="dropdown-item" href="#">JR Pass</a></li>
+              <li><a class="dropdown-item" href="#">Tiket Bus & Travel</a></li>
+              <li><a class="dropdown-item" href="#">Antar Jemput Bandara</a></li>
+              <li><a class="dropdown-item" href="#">Rental Mobil</a></li>
+              <li><a class="dropdown-item" href="#">Kereta Bandara</a></li>
+              <li><a class="dropdown-item" href="#">Status penerbangan</a></li>
+              <li><a class="dropdown-item" href="#">Notifikasi Harga</a></li>
+              </ul>
+            </div> 
+            <div class="dropdown">
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(0, 0, 0);">Tempat Menginap</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Hotel</a></li>
+              <li><a class="dropdown-item" href="#">Holiday Stay</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(0, 0, 0);">Aktivitas dan Hiburan</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Xperience</a></li>
+              <li><a class="dropdown-item" href="#">Eats</a></li>
+              <li><a class="dropdown-item" href="#">Kesehatan</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(0, 0, 0);">Tagihan & Isi Ulang</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Tagihan Saya</a></li>
+              <li><a class="dropdown-item" href="#">Pulsa & Paket Internet</a></li>
+              <li><a class="dropdown-item" href="#">Kartu Pascabayar</a></li>
+              <li><a class="dropdown-item" href="#">PLN</a></li>
+              <li><a class="dropdown-item" href="#">BPJS Kesehatan</a></li>
+              <li><a class="dropdown-item" href="#">Telkom</a></li>
+              <li><a class="dropdown-item" href="#">PDAM</a></li>
+              </ul>
+              </div>
+              <div class="dropdown">
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(0, 0, 0);">Produk Tambahan</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Xperience</a></li>
+              <li><a class="dropdown-item" href="#">Antar Jemput Bandara</a></li>
+              <li><a class="dropdown-item" href="#">Rental Mobil</a></li>
+              <li><a class="dropdown-item" href="#">Gift Voucher</a></li>
+              <li><a class="dropdown-item" href="#">Asuransi</a></li>
+              </ul>
+            </div>
+            </div>
+          <div class="bg-primary bg-gradient" style="height: 350px;">
+            <img src="travelokaa.jpg" class="mx-auto d-block" alt="travelokaa" style="width: 65%;">
+          </div>
+          </div>
+
+          <div class="container shadow p-3 mb-5 bg-body rounded z-index-2" style="height: 200px; width: 900px; margin-top: -35px;">
+            <h6><b>Tiket Bus & Travel</b></h6>
+            
+            <form>
+              <div class="form-inline">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label  for="dari"><b>Dari</b></label>
+                    <input type="text" placeholder="Ketik nama kota, terminal, atau titik lainnya" id="dari" class="form-control">
+                    </div>
+
+                    <div class="col-lg-6">
+                      <label  for="ke"><b>Ke</b></label>
+                      <input type="text" placeholder="Ketik nama kota, terminal, atau titik lainnya" id="ke" class="form-control">
+                  </div>
+              </div>
+              <br>
+
+              <div class="checkbox " style="position: absolute; left: 33%;">
+                <label><input type="checkbox"><b>Pulang Pergi?</b></label>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-3">
+                  <label  for="tglpergi"><b>Tanggal Pergi</b></label>
+                  <input type="text"placeholder="10 Feb 2022" id="tglpergi" class="form-control">
+                  </div>
+
+                  <div class="col-lg-2" style="position: absolute; left: 50%;">
+                    <label  for="kursi"><b>Jumlah Kursi</b></label>
+                    <input type="text"placeholder="1" id="kursi" class="form-control">
+                <button type="submit" class="btn btn-primary" style="position: absolute; left: 100%; width: 210px; bottom: 0px; background-color: rgb(255, 125, 19) !important; border-radius: 12px ;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#fff" viewBox="0 0 512 512"><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg> Cari</button>
+                </div>
+            </div>
+          </div>
+          </div>
+            </form>
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><b>Partner Bus & Travel Shuttle</b></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link"style="opacity: 50% !important;" href="#"><b>Rute Bus & Travel Populer</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"style="opacity: 50% !important;" href="#"><b>Cara Beli Tiket Bus dan Travel di Traveloka</b></a>
+              </li>
+            </ul>
+
+            <div class="container" style="position: relative;">
+            <hr>
+          </div>
+            <br>
+            <div class="container col-lg-3" style="left: 10%; position: absolute;">
+              <h4><b>Partner Bus</b></h4>
+              <h6><b>Operator Bus Favorit Anda</b></h6>
+              <p>Kami bekerja sama dengan berbagai operator bus tepercaya di Indonesia untuk mengantar Anda ke mana saja!</p>
+            </div>
+            <div class="container me-4 p-2" style="width: 50%; height: auto; position: relative; left: -10%;">
+              <div class="d-inline-block mb-5">
+              <img src="pahalakencana.jpeg" class="img-thumbnail  me-5" alt="pahalakencana">
+              <img src="lorena.jpeg" class="img-thumbnail me-5" alt="lorena">
+              <img src="damri.jpeg" class="img-thumbnail me-5" alt="damri">
+              <img src="primajasa.jpeg" class="img-thumbnail me-5" alt="primajasa">
+              <img src="argamas.jpeg" class="img-thumbnail me-5" alt="Argamas">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="als.jpeg" class="img-thumbnail  me-5">
+              <img src="sempati.jpeg" class="img-thumbnail me-5">
+              <img src="gununggarta.jpeg" class="img-thumbnail me-5">
+              <img src="gununghartasol.jpeg" class="img-thumbnail me-5">
+              <img src="kramatjati.jpeg" class="img-thumbnail me-5">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="sinajaya.jpeg" class="img-thumbnail  me-5">
+              <img src="litha.jpeg" class="img-thumbnail me-5">
+              <img src="agungmulia.jpeg" class="img-thumbnail me-5">
+              <img src="yessoe.jpeg" class="img-thumbnail me-5">
+              <img src="bejeu.jpeg" class="img-thumbnail me-5">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="nusantara.jpeg" class="img-thumbnail  me-5">
+              <img src="efisiensi.jpeg" class="img-thumbnail me-5">
+              <img src="wisatakomodo.jpeg" class="img-thumbnail me-5">
+              <img src="restumulya.jpeg" class="img-thumbnail me-5">
+              <img src="ekamira.jpeg" class="img-thumbnail me-5">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="images/sugengrahayu.jpeg" class="img-thumbnail  me-5">
+              <img src="images/putrapelangi.jpeg" class="img-thumbnail me-5">
+              <img src="images/sumberalam.jpeg" class="img-thumbnail me-5">
+              <img src="images/santoso.jpeg" class="img-thumbnail me-5">
+              <img src="images/mulyoindah.jpeg" class="img-thumbnail me-5">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="images/sedyamulya.jpeg" class="img-thumbnail  me-5">
+              <img src="images/gms.jpeg" class="img-thumbnail me-5">
+              <img src="images/gajahmungkur.jpeg" class="img-thumbnail me-5">
+              <img src="images/garudamas.jpeg" class="img-thumbnail me-5">
+              <img src="images/tiaramas.jpeg" class="img-thumbnail me-5">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="images/putraraflesia.jpeg" class="img-thumbnail  me-5">
+              <img src="images/whotehours.jpeg" class="img-thumbnail me-5">
+              <img src="images/putraremaja.jpeg" class="img-thumbnail me-5">
+              <img src="images/suryabali.jpeg" class="img-thumbnail me-5">
+              <img src="images/yoandaprima.jpeg" class="img-thumbnail me-5">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="images/mtrans.jpeg" class="img-thumbnail  me-5">
+              <img src="images/midas.jpeg" class="img-thumbnail me-5">
+              <img src="images/ajp.jpeg" class="img-thumbnail me-5">
+              <img src="images/bandungexp.jpeg" class="img-thumbnail me-5">
+              <img src="images/estubest.jpeg" class="img-thumbnail me-5">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="images/malangindah.jpeg" class="img-thumbnail  me-5">
+              <img src="images/sabar.jpeg" class="img-thumbnail me-5">
+              <img src="images/sido.jpeg" class="img-thumbnail me-5">
+              <img src="images/arya.png" class="img-thumbnail me-5">
+              <img src="images/epa.jpeg" class="img-thumbnail me-5">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="images/madjoe.jpeg" class="img-thumbnail  me-5">
+              <img src="images/sindoro.jpeg" class="img-thumbnail me-5">
+              <img src="images/zentrum.jpeg" class="img-thumbnail me-5">
+              <img src="images/putrakju.jpeg" class="img-thumbnail me-5">
+              <img src="images/menggala.jpeg" class="img-thumbnail me-5">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="images/puspajaya.jpeg" class="img-thumbnail  me-5">
+              <img src="images/rejekibaru.jpeg" class="img-thumbnail me-5">
+              <img src="images/ans.jpeg" class="img-thumbnail me-5">
+              <img src="images/diengindah.jpeg" class="img-thumbnail me-5">
+              <img src="images/doaibu.jpeg" class="img-thumbnail me-5">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="images/kap.jpeg" class="img-thumbnail  me-5">
+              <img src="images/mgi.jpeg" class="img-thumbnail me-5">
+              <img src="images/ezri.jpeg" class="img-thumbnail me-5">
+              <img src="images/titian.jpeg" class="img-thumbnail me-5">
+              <img src="images/rapi.jpeg" class="img-thumbnail me-5">
+            </div>
+            <div class="d-inline-block mb-5">
+              <img src="images/harapanjaya.jpeg" class="img-thumbnail  me-5">
+              <img src="images/puteramulya.jpeg" class="img-thumbnail me-5">
+              <img src="images/safaridarma.jpeg" class="img-thumbnail me-5">
+            </div>
+            </div>
+
+            <div class="container" style="position: relative;">
+          <hr>
+            </div>        
+            <div class="container col-lg-3" style="left: 10%; position: absolute;">
+              <h4><b>Partner Travel</b></h4>
+              <h6><b>Operator Travel Favorit Anda</b></h6>
+              <p>Baik untuk liburan atau pulang ke rumah, kini Anda bisa pesan tiket travel favorit dengan lebih mudah bersama kami.</p>
+            </div>
+            <div class="container me-4 p-2" style="width: 50%; height: auto; position: relative; left: -10%;">
+            <div class="d-inline-block mb-5">
+              <img src="images_travel1/daytrans.jpeg" class="img-thumbnail  me-5">
+              <img src="images_travel1/cititrans.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/xtrans.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/bigbird.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/jh.jpeg" class="img-thumbnail me-5">
+              </div>
+            <div class="d-inline-block mb-5">
+              <img src="images_travel1/mr.jpg" class="img-thumbnail  me-5">
+              <img src="images_travel1/lintas.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/baraya.png" class="img-thumbnail me-5">
+              <img src="images_travel1/aragon.png" class="img-thumbnail me-5">
+              <img src="images_travel1/areon.jpeg" class="img-thumbnail me-5">
+              </div>
+            <div class="d-inline-block mb-5">
+              <img src="images_travel1/pasteur.jpeg" class="img-thumbnail  me-5">
+              <img src="images_travel1/joglo.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/kencana.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/ramasakti.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/bimo.jpeg" class="img-thumbnail me-5">
+              </div>
+            <div class="d-inline-block mb-5">
+              <img src="images_travel1/kramatjati.jpeg" class="img-thumbnail  me-5">
+              <img src="images_travel1/wijaya.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/estu.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/bintang.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/agung.jpeg" class="img-thumbnail me-5">
+              </div>
+            <div class="d-inline-block mb-5">
+              <img src="images_travel1/dokari.jpeg" class="img-thumbnail  me-5">
+              <img src="images_travel1/kencanavyo.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/3 bintang.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/gading.jpeg" class="img-thumbnail me-5">
+              <img src="images_travel1/bali.jpeg" class="img-thumbnail me-5">
+              </div>
+              </div>
+
+              <div class="container" style="position: relative;">
+                <hr>
+                  </div>        
+                  <div class="container col-lg-3" style="left: 10%; position: absolute;">
+                    <h4><b>Partner Pembayaran</b></h4>
+                    <h6><b>Jadikan Pembayaran Lebih Mudah</b></h6>
+                    <p>Kami bekerja sama dengan bank dan mini market tepercaya untuk kenyamanan pembayaran Anda.</p>
+                  </div>
+                  <div class="container me-4 p-2" style="width: 50%; height: auto; position: relative; left: -10%;">
+                  <div class="d-inline-block mb-5">
+                    <img src="images_pembayaran/bca.png" class="img-thumbnail  me-5">
+                    <img src="images_pembayaran/mandiri.png" class="img-thumbnail me-5">
+                    <img src="images_pembayaran/bni.png" class="img-thumbnail me-5">
+                    <img src="images_pembayaran/bri.png" class="img-thumbnail me-5">
+                    <img src="images_pembayaran/visa.png" class="img-thumbnail me-5">
+                    </div>
+                  <div class="d-inline-block mb-5">
+                    <img src="images_pembayaran/mc.png" class="img-thumbnail  me-5">
+                    <img src="images_pembayaran/bersama.png" class="img-thumbnail me-5">
+                    <img src="images_pembayaran/alto.png" class="img-thumbnail me-5">
+                    <img src="images_pembayaran/prima.png" class="img-thumbnail me-5">
+                    <img src="images_pembayaran/bca1.png" class="img-thumbnail me-5">
+                    </div>
+                  <div class="d-inline-block mb-5">
+                    <img src="images_pembayaran/mandirideb.png" class="img-thumbnail  me-5">
+                    <img src="images_pembayaran/mandiriclick.png" class="img-thumbnail me-5">
+                    <img src="images_pembayaran/cimb.png" class="img-thumbnail me-5">
+                    <img src="images_pembayaran/indomaret.png" class="img-thumbnail me-5">
+                    <img src="images_pembayaran/alfa.png" class="img-thumbnail me-5">
+                    </div>
+                    <div class="d-inline-block mb-5">
+                      <img src="images_pembayaran/alfamidi.png" class="img-thumbnail  me-5">
+                    </div>
+                    </div>
+
+                    <div class="container" style="position: relative;">
+                      <hr>
+                        </div> 
+                        <br>
+                        <center>
+                          <h4><b>Enaknya beli tiket bus dan travel online di Traveloka</b></h4>
+                        </center>
+
+                        <div class="container" style="left: 18%; position: absolute;">
+                          <br>
+                          <img src="images_blue/1.png" class="img-thumbnail  me-5" style="width: 15%;">
+                          </div>
+                          <div class="container me-4 p-2" style="width: 50%; height: auto; position: relative; left: -10%;">
+                            <div class="d-inline-block me-5 mb-5">
+                             <br>
+                              <br>
+                              <h5>Praktis, Tanpa Repot</h5>
+                              <p>Beli tiket bus dan travel kapan saja dan dari mana saja dengan Traveloka. Tak perlu repot ke terminal atau kantor agen, sekarang Anda bisa beli tiket dengan mudah dari rumah.</p>
+                              </div>
+                              </div>
+                              
+                        <div class="container" style="right: 10%; position: absolute;">
+                          <br>
+                          <img src="images_blue/2.png" class="img-thumbnail  me-5" style="width: 15%; float: right;">
+                          </div>
+                          <div class="container" style="left: -8%; position: relative; width: 50%;">
+                             <br>
+                              <br>
+                              <h5>Customer Service 24 Jam</h5>
+                              <span>Kami menyediakan layanan Customer Service 24 jam. Jadi, kapan pun Anda punya pertanyaan, langsung telepon, chat, atau kirimkan pesan melalui Traveloka App Anda. Kami akan selalu siap membantu.</span>
+                              </div>
+                              <br>
+                              <br>
+
+                              <div class="container" style="left: 18%; position: absolute;">
+                                <br>
+                                <img src="images_blue/3.png" class="img-thumbnail  me-5" style="width: 15%;">
+                                </div>
+                                <div class="container me-4 p-2" style="width: 50%; height: auto; position: relative; left: -10%;">
+                                  <div class="d-inline-block me-5 mb-5">
+                                   <br>
+                                    <br>
+                                    <h5>Info Lengkap</h5>
+                                    <p>Mulai dari info jadwal bus dan travel, trayek, titik berangkat dan turun, dan biaya tiket, hingga foto dan fasilitasnya, semuanya bisa ditemukan di Traveloka untuk membantu Anda memilih bus dan travel terbaik.</p>
+                                    </div>
+                                    </div>
+
+                        <div class="container" style="right: 10%; position: absolute;">
+                          <br>
+                          <img src="images_blue/4.png" class="img-thumbnail  me-5" style="width: 15%; float: right;">
+                          </div>
+                          <div class="container" style="left: -8%; position: relative; width: 50%;">
+                         <br>
+                         <br>
+                        <h5>Pembayaran Mudah</h5>
+                    <span>Traveloka menyediakan beragam cara pembayaran, dari transfer bank, kartu kredit, hingga pembayaran tunai di mini market favorit Anda.</span>
+                  </div>
+                  <br>
+                  <br>
+
+                  <div class="container" style="left: 18%; position: absolute;">
+                    <br>
+                    <img src="images_blue/5.png" class="img-thumbnail  me-5" style="width: 15%;">
+                    </div>
+                    <div class="container me-4 p-2" style="width: 50%; height: auto; position: relative; left: -10%;">
+                      <div class="d-inline-block me-5 mb-5">
+                       <br>
+                        <br>
+                        <h5>Tambah Mudah Bayar dengan PayLater</h5>
+                        <p>Dengan PayLater, Anda bisa booking tiket pesawat kapan aja tanpa perlu membayar penuh secara langsung. Gunakan limit awal mulai dari 10 juta dengan cicilan 1-12 bulan dan bunga rendah.</p>
+                   </div>
+                   </div>
+              <div class="container" style="position: relative;">
+                <hr>
+            </div> 
+          <br>
+            <center>
+              <h4><b>Cara Beli Tiket Bus & Travel Online di Traveloka</b></h4>
+            </center>
+          <br>
+          <div class="container" style="width: 900px; height: 400px; background-color: rgb(26, 26, 110) !important; border-radius: 12px !important;">
+            <img src="images_blue/bis.svg" class="images" style="position: absolute; right: 18%; opacity: 40% !important;">
+
+            <div class="p-5 text-white">
+              <h4>Informasi Lanjut</h4>
+              <h3>Syarat dan Regulasi Perjalanan Bus & Travel Selama Pandemi COVID-19</h3>
+              <br>
+              <div class=" container text-white" style="opacity:70% !important; width: 70%; float: left; ">
+              <h5>Temukan informasi lengkap dan terbaru terkait syarat perjalanan dengan bus dan travel shuttle, terminal yang menyediakan vaksinasi dan banyak lagi.</h5>
+              <button type="button" class="btn btn-link" style="position: absolute; left: 282px;"><b>Lihat Selengkapnya</b></button>
+            </div>
+            </div>
+          </div>
+          <br>
+        <center>
+          <h3>Destinasi Bus Populer</h3>
+        </center>                
+        <br>
+
+          <div class="container" style="position: relative; left: 2%; width: 75%;">
+            <img src="images_blue/bandung.jpeg" class="rounded me-5" style="height:60%;">
+            <img src="images_blue/bali.jpeg" class="rounded me-5 " style="height:60%;">
+            <img src="images_blue/malang.jpeg" class="rounded me-5" style="height:190px;">
+            <img src="images_blue/surabaya.jpeg" class="rounded mt-5 me-5" style="height:70%; position: relative; right: -33.5%; width: 30%;">
+            </div>
+
+            <br>
+            <br>
+            <center>
+              <h3>Bus & Travel Frequently Asked Questions</h3>
+            </center>
+            <br>
+
+            <div class="row">
+              <div class="col-12 text-center">
+            <div class="container">
+              <p>
+                <button class="btn border" style="position: relative; width: 100%; height: 100;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                  <b>Bagaimana cara bepergian dengan bus selama pandemi COVID-19?</b>
+                </button>
+              </p>
+                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                  <div class="card card-body">
+                    Pelajari syarat lengkap bepergian selama COVID-19 di  di https://www.traveloka.com/id-id/tiket-bus-travel/coronavirus-information
+                  </div>
+                </div>
+
+                <p>
+                  <button class="btn border" style="position: relative; width: 100%; background-color: lightskyblue !important; height: 100;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample1" aria-expanded="false" aria-controls="collapseWidthExample">
+                    <b>Bagaimana jaminan kebersihan yang diterapkan oleh Bus & Travel Traveloka?</b>
+                  </button>
+                </p>
+                  <div class="collapse collapse-horizontal" id="collapseWidthExample1">
+                    <div class="card card-body">
+                      Untuk memastikan keamanan penumpang saat bepergian dengan bus, operator-operator Bus & Travel kami telah mengambil langkah-langkah pencegahan tambahan yang dijelaskan secara detail di  halaman https://www.traveloka.com/id-id/tiket-bus-travel/coronavirus-information?view=measures. Langkah-langkah yang diambil mencakup hal-hal di bawah ini.
+
+Pembersih Tangan (Hand Sanitizer)
+Pembersih tangan disediakan di dalam bus dan di titik-titik pemberhentian.
+
+Desinfeksi
+Desinfeksi dilakukan secara rutin di bus dan di lokasi keberangkatan.
+
+Pengurangan Kapasitas Penumpang
+Kapasitas penumpang bus telah dikurangi hingga 30%.
+
+Pemeriksaan Kesehatan
+Pengecekan kesehatan penumpang, pengemudi, dan staf bus rutin dilakukan sebelum perjalanan dimulai. Individu yang menunjukkan gejala infeksi saluran pernapasan dilarang naik ke bus.
+
+Penjagaan Kesehatan Staf
+Pengemudi dan staf bus mengenakan masker wajah untuk keseluruhan perjalanan. Staf konter juga mengenakan masker wajah.
+
+Penggunaan Masker Wajah
+Penumpang yang tidak memakai masker wajah akan dilarang naik ke bus.
+
+Ketentuan sewaktu-waktu dapat berubah sesuai kebijakan PO bus
+                    </div>
+                  </div>
+
+                <p>
+                  <button class="btn border" style="position: relative; width: 100%; height: 100;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample3" aria-expanded="false" aria-controls="collapseWidthExample">
+                    <b>Apakah bisa melakukan pengembalian atau perubahan jadwal setelah memesan tiket?</b>
+                  </button>
+                </p>
+                  <div class="collapse collapse-horizontal" id="collapseWidthExample3">
+                    <div class="card card-body">
+                      Sebelum mengajukan refund atau reschedule untuk pesanan bus Anda, silakan cek dahulu apakah refund atau reschedule tersedia untuk tiket Anda. Pergi ke Pesanan, kemudian Buka e-tiket yang ingin Anda refund atau reschedule. Temukan Kebijakan Pembatalan dan Kebijakan Pengubahan Jadwal di bagian bawah halaman dan baca kebijakan tersebut.
+
+Apabila dapat refund dan reschedule, Anda dapat mengajukan refund atau reschedule untuk pesanan bus Anda dengan mengontak operator bus terkait. Anda dapat menemukan detail kontak operator bus Anda pada e-tiket yang dikirim ke email Anda atau pada e-tiket di Traveloka App, di bagian Kebijakan Pembatalan dan Kebijakan Pengubahan Jadwal.
+                    </div>
+                  </div>
+
+                  
+                <p>
+                  <button class="btn border" style="position: relative; background-color: lightskyblue !important; width: 100%; height: 100;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample4" aria-expanded="false" aria-controls="collapseWidthExample">
+                    <b>Apakah bisa memilih nomor kursi?</b>
+                  </button>
+                </p>
+                  <div class="collapse collapse-horizontal" id="collapseWidthExample4">
+                    <div class="card card-body">
+                      Tidak semua PO membolehkan Anda memilih kursi Anda sendiri. Namun, untuk PO yang membolehkan pemilihan kursi, Anda bisa pilih kursi yang Anda inginkan pada halaman pemesanan.
+                    </div>
+                  </div>
+                  
+                <p>
+                  <button class="btn border" style="position: relative; width: 100%; height: 100;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample5" aria-expanded="false" aria-controls="collapseWidthExample">
+                    <b>Bagaimana cara menggunakan e-tiket bus Traveloka?</b>
+                  </button>
+                </p>
+                  <div class="collapse collapse-horizontal" id="collapseWidthExample5">
+                    <div class="card card-body">
+                      Silakan cek e-tiket pada Traveloka App, email, atau SMS dan pastikan apakah Anda harus menukarkan e-tiket tersebut dengan tiket kertas dari PO bus.
+
+Jika tertera bahwa Anda perlu menukar e-tiket Anda, Anda bisa menunjukkan e-tiket Anda ke staf bus di titik berangkat dan memintanya untuk memberi Anda tiket kertas.
+
+Jika tertera bahwa e-tiket Anda adalah tiket resmi, cukup tunjukkan e-tiket kepada staf bus di titik berangkat untuk naik ke bus.
+
+Mohon juga tunjukkan KTP, SIM, atau kartu pelajar Anda ke staf bus bersama dengan e-tiket Anda.
+
+
+Yang perlu dicatat:
+Mohon tiba di titik berangkat paling lambat 60 menit sebelum keberangkatan. Waktu yang tertera pada tiket Anda adalah waktu lokal di masing-masing titik keberangkatan.
+                    </div>
+                  </div>
+
+                  <p>
+                    <button class="btn border" style="position: relative; background-color: lightskyblue !important; width: 100%; height: 100;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample6" aria-expanded="false" aria-controls="collapseWidthExample">
+                      <b>Berapa lama sebelum perjalanan saya bisa membeli tiket bus?</b>
+                    </button>
+                  </p>
+                    <div class="collapse collapse-horizontal" id="collapseWidthExample6">
+                      <div class="card card-body">
+                        Anda bisa membeli tiket dari 3 bulan hingga 1 hari sebelum keberangkatan, tergantung kebijakan dan ketersediaan tiket dari masing-masing PO.Khusus untuk Pahala Kencana, tiket masih bisa dibeli 6 jam sebelum keberangkatan
+                      </div>
+                    </div>
+            </div>
+          </div>
+        </div>
+        <br>
+            <br>
+            <center>
+              <h3>Rute Bus & Travel Populer</h3>
+            </center>
+            <br>
+            
+            <div class="container d-flex">
+            <div class="card  ms-5" style="width: 18rem;">
+              
+              <img src="images_blue/bandung.jpeg" class="card-img-top" alt="...">
+              <div class="list-group">
+                
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Bandung</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp70.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Yogyakarta</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp125.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Surabaya</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp210.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Semarang</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp105.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Solo</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp120.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Lampung</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp180.000</b></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ms-5" style="width: 18rem; position: relative;">
+              
+              <img src="images_blue/bandung.jpeg" class="card-img-top" alt="...">
+              <div class="list-group">
+                
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Bandung</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp70.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Yogyakarta</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp125.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Surabaya</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp210.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Semarang</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp105.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Solo</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp120.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Lampung</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp180.000</b></span>
+                </div>
+              </div>
+            </div>
+            <div class="card  ms-5" style="width: 18rem;">
+              
+              <img src="images_blue/bandung.jpeg" class="card-img-top" alt="...">
+              <div class="list-group">
+                
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Bandung</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp70.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Yogyakarta</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp125.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Surabaya</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp210.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Semarang</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp105.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Solo</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp120.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Lampung</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp180.000</b></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ms-5" style="width: 18rem; position: relative;">
+              
+              <img src="images_blue/bandung.jpeg" class="card-img-top" alt="...">
+              <div class="list-group">
+                
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Bandung</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp70.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Yogyakarta</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp125.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Surabaya</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp210.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Semarang</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp105.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Solo</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp120.000</b></span>
+                </div>
+
+                <div class="component-overflow item list-group-item" data-component="true" data-name="bandungg" data-id="bandungg1"><a href="#" class="item__place"><b>Lampung</b></a>
+                  <span class="item__price in" style="float: right;"><b>Rp180.000</b></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+                
+          <br>
+          <br>
+          <br>
+          <div class="container">
+            <center>
+              <h4>Rencanakan Perjalanan: Pesan Tiket Bus dan Travel Shuttle Lewat Agen Tiket Bus Online, Traveloka Lifestyle SuperApp</h4>
+            </center>
+            <br>
+          </div>
+                
+          <div class="container">
+            <p>Bersiaplah mendapatkan kemudahan lebih saat merencanakan perjalanan untuk liburan, atau perjalanan tiket bus lebaran atau pulang kampung menggunakan bus/travel shuttle atau bus antarkota dengan Traveloka. Fitur terbaru Traveloka ini membuat pemesanan tiket bus dan travel shuttle jadi semudah belanja online. Dengan moto 3P, Anda cukup melakukan tiga langkah saja–Pilih bus/travel sesuai kebutuhan, Pesan tiket bus/travel yang diinginkan, lalu Pergi dengan nyaman dan tenang karena semuanya beres dalam sekejap.</p>
+            <p>Berikut adalah beberapa tips agar beli tiket di Traveloka semakin mudah dan perjalanan Anda pun semakin lancar!</p>
+            <button type="button" class="btn btn-link" style="position: relative; left: 40%;"><b>Lihat Selengkapnya</b></button>
+          </div>
+<br>
+<br>
+          <center>
+            <h4>Beli Tiket Bus & Travel Online di Traveloka, Perjalanan Mulus dan Untung Terus</h4>
+          </center>
+          <br>
+          <div class="container">
+            Sejak 16 Maret 2018, Traveloka mulai memperkenalkan fitur pemesanan tiket bus online & tiket travel online dan menjadi salah satu agen tiket bus travel online melalui Traveloka App versi 2.21. Layanan ini memberikan kemudahan beli tiket bus & travel antarkota-antarprovinsi karena calon penumpang tak lagi harus antre membeli tiket bus di loket atau mendatangi agen tiket tertentu. Bahkan, layanan pesan tiket bus & travel online ini sekarang juga sudah tersedia di situs mobile Traveloka.
+
+            Traveloka juga tidak tanggung-tanggung dalam memberikan layanan pesan tiket bus & travel. Calon penumpang yang ingin beli tiket bus online di Traveloka bisa menemukan pilihan yang begitu lengkap. Hingga saat ini, Traveloka telah menjalin kemitraan dengan 57 Perusahaan Otobus (PO) dan travel shuttle ternama di berbagai kota dan provinsi di Tanah Air.
+            
+            Dari segi fasilitas bus, Traveloka juga memastikan penggunanya dapat memilih berbagai jenis bus berdasarkan kebutuhan. Kelas bus dan travel tersedia mulai dari Premium, VIP, Bisnis, Eksekutif, hingga Super Eksekutif. Penumpang dapat menikmati beragam fasilitas bus seperti AC, kursi recliner, toilet, WiFi, dan stopkontak, tergantung kelas dan jenis bus yang dipilih.
+            
+            Selain yang sudah disebutkan di atas, masih ada berbagai keuntungan lain yang bisa didapatkan ketika pesan tiket bus online melalui Traveloka Lifestyle SuperApp. Penasaran? Simak uraian di bawah ini.
+          </div>
+          <br>
+          <br>
+          <div class="container">
+            <h5>1. Pilih, Pesan, Pergi</h5>
+            <p>Dengan aplikasi dan situs mobile Traveloka, pesan tiket bus dan travel tak lagi seribet dulu. Anda tinggal membuka Traveloka App di ponsel, di mana saja dan kapan saja. Proses beli tiket bus dan travel online via ponsel ini sangat mudah, cepat, dan aman. Anda juga tidak perlu lagi repot membuang waktu dan energi untuk mendatangi loket penjualan tiket yang kerap disesaki antrean. Bahkan, layanan yang dihadirkan Traveloka ini bisa dibilang memberikan pengalaman booking tiket bus dan travel semudah belanja online. Anda juga tak perlu khawatir jika sewaktu-waktu mengalami kendala dalam pemesanan tiket bus dan travel. Traveloka sudah menyediakan layanan pelanggan yang siap membantu selama 24 jam penuh, baik melalui chat, telepon, email, maupun dengan mengirim pesan melalui Traveloka App.</p>
+            <br>
+            <h5>2. Pilihan Tak Terbatas</h5>
+            <p>Traveloka bekerja sama secara resmi dengan beragam operator bus (PO) dan travel yang melayani ratusan rute ke berbagai kota dan provinsi di Indonesia. Saat ini, tercatat ada 57 rekan PO dan travel di Traveloka. Beberapa mitra PO ternama yang sudah bekerja sama dengan Traveloka adalah Budiman, Pahala Kencana, Agra Mas, Lorena, Primajasa, ALS, Rosalia Indah, Sempati Star, Nusantara, DAMRI, Gunung Harta, Kramat Djati, Efisiensi, Big Bird, Bejeu, dan Garuda Mas. Sementara itu, Traveloka juga sudah menjalin kerja sama dengan Cititrans dan Daytrans Shuttle untuk menyediakan layanan travel (shuttle). Rute yang dilayani pun banyak, terutama untuk kota-kota populer seperti Jakarta, Surabaya, Medan, Denpasar, Yogyakarta, Malang, Semarang, Bandung, Makassar, Solo, dan Palangkaraya. Jumlah ini tentunya akan terus bertambah ke depannya, baik untuk mitra PO dan travel maupun pilihan rute.</p>
+            <br>
+            <h5>3. Informasi Lengkap</h5>
+            <p>Saat pesan bus online di Traveloka, Anda dapat dengan mudah menemukan informasi lengkap mengenai perjalanannya. Informasi perihal detail harga, rute, waktu dan titik berangkat maupun tiba, pilihan jenis bus, spesifikasi bus, hingga foto tampilan bus, semua tersedia langsung di aplikasi dan situs mobile. Anda pun bisa langsung melakukan perbandingan dan memilih bus yang paling sesuai dengan kebutuhan hanya dengan beberapa klik saja.</p>
+            <br>
+            <h5>4. Metode Pembayaran Lengkap</h5>
+            <p>Traveloka memastikan pengguna dapat menyelesaikan pembayaran tiket bus dan travel dengan cepat dan aman. Berkat kerja sama resmi Traveloka dengan berbagai bank besar di Tanah Air, metode pembayaran yang tersedia pun lengkap untuk menambah kenyamanan konsumen. Anda dapat melakukan pembayaran di Indomaret dan Alfamart, atau melalui kartu kredit, transfer bank, dan ATM.</p>
+            <br>
+            <h5>5. Harga Lebih Murah</h5>
+            <p>Untuk semua layanannya, Traveloka selalu menawarkan harga terbaik untuk penggunanya. Begitu pula dengan layanan booking tiket bus dan travel online ini. Seluruh tiket bus dan travel di Traveloka ditawarkan dengan harga lebih rendah dari pasarannya. Promo menarik yang kerap diperbarui setiap beberapa bulan sekali pun siap menjadikan biaya beli tiket bus dan travel di Traveloka lebih murah lagi.</p>
+            <br>
+            <h5>6. Jaminan Tiket Resmi</h5>
+            <p>Traveloka menjalin kerja sama resmi dengan operator bus dan travel sehingga informasi tiket yang Anda beli sudah dikoordinasikan kepada semua staf di titik keberangkatan. Anda tinggal menunjukkan e-tiket Traveloka dan langsung bisa naik ke bus untuk memulai perjalanan. Jika pun terjadi masalah pada tiket seperti e-tiket ditolak, kursi diambil orang lain, atau bus berangkat lebih cepat, maka Traveloka siap memberikan kendaraan pengganti atau mengembalikan dana Anda 100%.
+
+              Yuk, siapkan diri Anda untuk perjalanan yang mulus dan untung terus dengan tiket bus dan travel dari Traveloka!</p>
+
+              <button type="button" class="btn btn-link" style="position: relative; left: 40%;"><b>Lihat Selengkapnya</b></button>
+          </div>
+
+
+      <footer class="bg-dark pt-5 pb-4">
+            <div class="container text-md-left">
+              <div class="row text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold text-white">TentangTraveloka</h6>
+                  <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">Cara Pesan</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Hubungi Kami</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Pusat Bantuan</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Karir</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Cicilan</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Tentang Kami</a>
+                  </p>
+                </div>
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold text-white">Produk</h6>
+                  <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">Tiket Pesawat</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Hotel</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Kereta Api</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">JR Pass</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Pesawat + Hotel</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Xperience</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Eats</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Peta Situs Eats</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Rental Mobil</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Internet Luar Negeri</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Pembyaran Tagihan</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">PayLater</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Tiket Bus dan Travel</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Gift Voucher</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Asuransi</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Vila</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Apartemen</a>
+                  </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Antar Jemput Bandara/a>
+                  </p>
+
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold text-white">Lainnya</h6>
+                  <p>
+                    <a href="#" class="text-white" style="text-decoration: none;">Tiket Pesawat</a>
+                </p>
+                <p>
+                    <a href="#" class="text-white"style="text-decoration: none;">Hotel</a>
+                </p>
+              </div>
+
+              
+            </div>
+    </footer>
+</body>
+</html>
